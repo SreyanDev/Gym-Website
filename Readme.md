@@ -4,7 +4,7 @@
 
 3. Open terminal and type cd C:\xampp\htdocs
 
-4. Next, type git clone 
+4. Next, type git clone https://github.com/SreyanDev/Gym-Website.git
 
 5. Open xampp and start Apache and MySQL and click on admin
 
