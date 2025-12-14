@@ -10,4 +10,4 @@
 
 6. Import the sql database to phpymyadmin
 
-7. Enter localhost/gym to run the website
+7. Enter localhost/Gym-Website to run the website
