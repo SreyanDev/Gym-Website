@@ -1,10 +1,10 @@
-1. Git clone 
+1. Install xampp
 
-2. Install xampp
+2. Open vsc
 
-3. Paste project in C:\xampp\htdocs
+3. Open terminal and type cd C:\xampp\htdocs
 
-4. Link php to sql properly
+4. Next, type git clone 
 
 5. Open xampp and start Apache and MySQL and click on admin
 
