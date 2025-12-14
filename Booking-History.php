@@ -1,211 +1,141 @@
-<?php session_start();
+<?php 
+session_start();
 error_reporting(0);
 require_once('include/config.php');
-if(strlen( $_SESSION["uid"])==0)
-    {   
-header('location:login.php');
-}
-else{
-$uid=$_SESSION['uid'];
+
+if(strlen($_SESSION["uid"]) == 0) {   
+    header('location:login.php');
+} else {
+    $uid = $_SESSION['uid'];
 ?>
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
-	<title>User | Booking History</title>
-	<meta charset="UTF-8">
-	<meta name="description" content="Ahana Yoga HTML Template">
-	<meta name="keywords" content="yoga, html">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- Stylesheets -->
-	<link rel="stylesheet" href="css/bootstrap.min.css"/>
-	<link rel="stylesheet" href="css/font-awesome.min.css"/>
-	<link rel="stylesheet" href="css/owl.carousel.min.css"/>
-	<link rel="stylesheet" href="css/nice-select.css"/>
-	<link rel="stylesheet" href="css/slicknav.min.css"/>
-
-	<!-- Main Stylesheets -->
-	<link rel="stylesheet" href="css/style.css"/>
-
+    <title>User | Booking History</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Ahana Yoga HTML Template">
+    <meta name="keywords" content="yoga, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="css/nice-select.css"/>
+    <link rel="stylesheet" href="css/slicknav.min.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
-	<!-- Page Preloder -->
-	
-	<!-- 
 
+    <!-- Header Section -->
+    <?php include 'include/header.php';?>
 
-	- Author Name: MH RONY.
-	- GigHub Link: https://github.com/dev-mhrony
-	- Facebook Link:https://www.facebook.com/dev.mhrony
-	- Youtube Link: <a href = "https://www.youtube.com/@codecampbdofficial"> Code Camp BD</a>
-	- for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
-	- Visit My Website : https://dev-mhrony.com
-	 -->
-	<!-- Header Section -->
-	<?php include 'include/header.php';?>
-	<!-- Header Section end -->
-	                                                                              
-	<!-- Page top Section -->
-	<section class="page-top-section set-bg" data-setbg="img/page-top-bg.jpg">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-7 m-auto text-white">
-					<h2>Booking History</h2>
-					
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- Page top Section end -->
+    <!-- Page top Section -->
+    <section class="page-top-section set-bg" data-setbg="img/page-top-bg.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7 m-auto text-white">
+                    <h2>Booking History</h2>
+                </div>
+            </div>
+        </div>
+    </section>
 
-	<!-- Contact Section -->
-	<section class="contact-page-section spad overflow-hidden">
-		<div class="container">
-			
-			<div class="row">
-					<!-- 
+    <!-- Booking History Table Section -->
+    <section class="contact-page-section spad overflow-hidden">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Sr.No</th>
+                                <th hidden>bookingid</th>
+                                <th hidden>Name</th>
+                                <th hidden>Email</th>
+                                <th>Booking Date</th>
+                                <th>Title</th>
+                                <th>Package Duration</th>
+                                <th>Price</th>
+                                <th>Description</th>
+                                <th>Category Name</th>
+                                <th>Package Name</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php
+                            $sql = "SELECT t1.id AS bookingid,
+                                           t3.fname AS Name, 
+                                           t3.email AS email,
+                                           t1.booking_date AS bookingdate,
+                                           t2.titlename AS title,
+                                           t2.PackageDuration AS PackageDuration,
+                                           t2.Price AS Price,
+                                           t2.Description AS Description,
+                                           t4.category_name AS category_name,
+                                           t5.PackageName AS PackageName
+                                    FROM tblbooking AS t1
+                                    JOIN tbladdpackage AS t2 ON t1.package_id = t2.id
+                                    JOIN tbluser AS t3 ON t1.userid = t3.id
+                                    JOIN tblcategory AS t4 ON t2.category = t4.id
+                                    JOIN tblpackage AS t5 ON t2.PackageType = t5.id
+                                    WHERE t1.userid = :uid";
 
+                            $query = $dbh->prepare($sql);
+                            $query->bindParam(':uid', $uid, PDO::PARAM_STR);
+                            $query->execute();
+                            $results = $query->fetchAll(PDO::FETCH_OBJ);
+                            $cnt = 1;
 
-	- Author Name: MH RONY.
-	- GigHub Link: https://github.com/dev-mhrony
-	- Facebook Link:https://www.facebook.com/dev.mhrony
-	- Youtube Link: <a href = "https://www.youtube.com/@codecampbdofficial"> Code Camp BD</a>
-	- for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
-	- Visit My Website : https://dev-mhrony.com
-	 -->
-				<div class="col-lg-12">
-					<table class="table table-bordered">
-    <thead>
-      <tr>
-        <th>Sr.No</th>
-        <th hidden>bookingid</th>
-        <th hidden>Name</th>
-        <th hidden>email</th>
-        <th>bookingdate</th>
-        <th>title</th>
-        <th>PackageDuratiobn</th>
-        <th>price</th>
-        <th>Description</th>
-        <th>category_name</th>
-        <th>PackageName</th>
-        <th>Action</th>
+                            if($query->rowCount() > 0){
+                                foreach($results as $result) { ?>
+                                    <tr>
+                                        <td><?php echo $cnt;?></td>
+                                        <td hidden><?php echo htmlentities($result->bookingid);?></td>
+                                        <td hidden><?php echo htmlentities($result->Name);?></td>
+                                        <td hidden><?php echo htmlentities($result->email);?></td>
+                                        <td><?php echo htmlentities($result->bookingdate);?></td>
+                                        <td><?php echo htmlentities($result->title);?></td>
+                                        <td><?php echo htmlentities($result->PackageDuration);?></td>
+                                        <td><?php echo htmlentities($result->Price);?></td>
+                                        <td><?php echo htmlentities($result->Description);?></td>
+                                        <td><?php echo htmlentities($result->category_name);?></td>
+                                        <td><?php echo htmlentities($result->PackageName);?></td>
+                                        <td>
+                                            <a href="booking-details.php?bookingid=<?php echo htmlentities($result->bookingid);?>">
+                                                <button class="btn btn-primary" type="button">View</button>
+                                            </a>
+                                        </td>
+                                    </tr>
+                            <?php $cnt++; } 
+                            } else { ?>
+                                <tr>
+                                    <td colspan="12" class="text-center">No bookings found.</td>
+                                </tr>
+                            <?php } ?>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Footer Section -->
+    <?php include 'include/footer.php'; ?>
 
-      </tr>
-    </thead>
-          <?php
-          $uid=$_SESSION['uid'];
-                  /*$sql="select id, product_id, userid, product_title, packages, category, PackageDuratiobn, price, descripation, booking_date from tblbooking where userid=:uid";*/
-                  $sql="SELECT t1.id as bookingid,t3.fname as Name, t3.email as email,t1.booking_date as bookingdate,t2.titlename as title,t2.PackageDuratiobn as PackageDuratiobn,
-t2.Price as Price,t2.Description as Description,t4.category_name as category_name,t5.PackageName as PackageName FROM tblbooking as t1
- join tbladdpackage as t2
-on t1.package_id =t2.id
-join tbluser as t3
-on t1.userid=t3.id
-join tblcategory as t4
-on t2.category=t4.id
-join tblpackage as t5
-on t2.PackageType=t5.id
-where t1.userid=:uid";
-                  $query= $dbh->prepare($sql);
-                  $query->bindParam(':uid',$uid, PDO::PARAM_STR);
-                  $query-> execute();
-                  $results = $query -> fetchAll(PDO::FETCH_OBJ);
-                  $cnt=1;
-                  if($query -> rowCount() > 0)
-                  {
-                  foreach($results as $result)
-                  {
-                  ?>
-	<!-- 
+    <div class="back-to-top"><img src="img/icons/up-arrow.png" alt=""></div>
 
+    <!-- Scripts -->
+    <script src="js/vendor/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.slicknav.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/main.js"></script>
 
-	- Author Name: MH RONY.
-	- GigHub Link: https://github.com/dev-mhrony
-	- Facebook Link:https://www.facebook.com/dev.mhrony
-	- Youtube Link: <a href = "https://www.youtube.com/@codecampbdofficial"> Code Camp BD</a>
-	- for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
-	- Visit My Website : https://dev-mhrony.com
-	 -->
-                <tbody>
-                  <tr>
-                    <td><?php echo($cnt);?></td>
-                    <td hidden><?php echo htmlentities($result->bookingid);?></td>
-                    <td hidden><?php echo htmlentities($result->Name);?></td>
-                    <td hidden><?php echo htmlentities($result->email);?></td>
-                    <td><?php echo htmlentities($result->bookingdate);?></td>
-                    <td><?php echo htmlentities($result->title);?></td>
-                    <td><?php echo htmlentities($result->PackageDuratiobn);?></td>
-                    <td><?php echo $result->Price;?></td>
-                    <td><?php echo $result->Description;?></td>
-                    <td><?php echo htmlentities($result->category_name);?></td>
-                    <td><?php echo htmlentities($result->PackageName);?></td>
-                    <td><a href="booking-details.php?bookingid=<?php echo htmlentities($result->bookingid);?>"><button class="btn btn-primary" type="button">View</button></td>
-                  </tr>
-                    <?php  $cnt=$cnt+1; } } ?>
-              
-                </tbody>
-  </table>
-				</div>
-			
-			</div>
-		</div>
-	</section>
-	<!-- Trainers Section end -->
-
-	<!-- 
-
-
-	- Author Name: MH RONY.
-	- GigHub Link: https://github.com/dev-mhrony
-	- Facebook Link:https://www.facebook.com/dev.mhrony
-	- Youtube Link: <a href = "https://www.youtube.com/@codecampbdofficial"> Code Camp BD</a>
-	- for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
-	- Visit My Website : https://dev-mhrony.com
-	 -->
-
-	<!-- Footer Section -->
-<?php include 'include/footer.php'; ?>
-	<!-- Footer Section end -->
-	
-	<div class="back-to-top"><img src="img/icons/up-arrow.png" alt=""></div>
-
-	<!--====== Javascripts & Jquery ======-->
-	<script src="js/vendor/jquery-3.2.1.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/jquery.slicknav.min.js"></script>
-	<script src="js/owl.carousel.min.js"></script>
-	<script src="js/jquery.nice-select.min.js"></script>
-	<script src="js/jquery-ui.min.js"></script>
-	<script src="js/jquery.magnific-popup.min.js"></script>
-	<script src="js/main.js"></script>
-
-	</body>
+</body>
 </html>
- <style>
-.errorWrap {
-    padding: 10px;
-    margin: 0 0 20px 0;
-    background: #dd3d36;
-    color:#fff;
-    -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
-    box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
-}
-.succWrap{
-    padding: 10px;
-    margin: 0 0 20px 0;
-    background: #5cb85c;
-    color:#fff;
-    -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
-    box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
-}
-        </style>
-        <?php } ?>	<!-- 
-
-
-	- Author Name: MH RONY.
-	- GigHub Link: https://github.com/dev-mhrony
-	- Facebook Link:https://www.facebook.com/dev.mhrony
-	- Youtube Link: <a href = "https://www.youtube.com/@codecampbdofficial"> Code Camp BD</a>
-	- for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
-	- Visit My Website : https://dev-mhrony.com
-	 -->
+<?php } ?>

@@ -24,7 +24,9 @@ echo "<script>window.location.href='booking-history.php'</script>";
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
-	<title>Gym Management System</title>
+	<title>FIT-FORGE-GYM</title>
+	<link rel="icon" href="img/icons/favicon.ico" type="image/png">
+	
 	<meta charset="UTF-8">
 	<meta name="description" content="Ahana Yoga HTML Template">
 	<meta name="keywords" content="yoga, html">
@@ -48,26 +50,14 @@ echo "<script>window.location.href='booking-history.php'</script>";
 
 	<!-- Header Section -->
 	<?php include 'include/header.php';?>
-	<!-- Header Section end -->
-
-	<!-- 
-
-
-	- Author Name: MH RONY.
-	- GigHub Link: https://github.com/dev-mhrony
-	- Facebook Link:https://www.facebook.com/dev.mhrony
-	- Youtube Link: <a href = "https://www.youtube.com/@codecampbdofficial"> Code Camp BD</a>
-	- for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
-	- Visit My Website : https://dev-mhrony.com
-	 -->
-
+	
 	                                                                              
 	<!-- Page top Section -->
 	<section class="page-top-section set-bg" data-setbg="img/page-top-bg.jpg">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-7 m-auto text-white">
-					<h2>About GYM Management System</h2>
+					<h2>FIT-FORGE</h2>
 				</div>
 			</div>
 		</div>
@@ -85,7 +75,19 @@ echo "<script>window.location.href='booking-history.php'</script>";
 			<div class="row">
 
 				<div class="col-lg-12 col-sm-6">
-			<p>Hola amigos! We are a bunch of curious and intellectual professionals who out of boredom from the monotonous routine, established Brand Beavers in Mumbai to emerge as problem solvers. Our team of entrepreneurs, thinkers, strategists, designers, and technologists will help you to emerge as an effective and disruptive brand all over the globe. Our brainstorming and amicable individuals go beyond their comfort zone to satisfy the customer’s requirements.</p>
+			<p>"💪 Welcome to FIT-FORGE! 🔥<br><br>
+At <strong>FIT-FORGE</strong>, we believe fitness is not just a routine — it’s a <strong>lifestyle</strong>! 🌟<br><br>
+Our mission is simple:<br>
+To help you <strong>forge your body, mind, and spirit</strong> into the strongest, healthiest version of yourself. 🏋️‍♂️🧠💖<br><br>
+<strong>What we offer:</strong><br>
+✨ State-of-the-art facilities<br>
+✨ Expert trainers guiding every step<br>
+✨ Motivating programs for all fitness levels<br>
+✨ A supportive and energetic community<br><br>
+Whether you’re just starting your journey or aiming to <strong>break personal records</strong>,<br>
+<strong>FIT-FORGE</strong> is your ultimate destination for transformation. 🚀<br><br>
+Join us today and experience a gym where we don’t just train…<br>
+we <strong>forge champions</strong>! 🏆💥"</p>
 				</div>
 			</div>
 		</div>
@@ -99,16 +101,7 @@ echo "<script>window.location.href='booking-history.php'</script>";
 	<div class="back-to-top"><img src="img/icons/up-arrow.png" alt=""></div>
 
 	<!-- Search model end -->
-	<!-- 
-
-
-	- Author Name: MH RONY.
-	- GigHub Link: https://github.com/dev-mhrony
-	- Facebook Link:https://www.facebook.com/dev.mhrony
-	- Youtube Link: <a href = "https://www.youtube.com/@codecampbdofficial"> Code Camp BD</a>
-	- for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
-	- Visit My Website : https://dev-mhrony.com
-	 -->
+	
 	<!--====== Javascripts & Jquery ======-->
 	<script src="js/vendor/jquery-3.2.1.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>

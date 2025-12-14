@@ -95,17 +95,7 @@ $error ="Registration Not successfully";
 	<link rel="stylesheet" href="css/owl.carousel.min.css"/>
 	<link rel="stylesheet" href="css/nice-select.css"/>
 	<link rel="stylesheet" href="css/slicknav.min.css"/>
-	<!-- 
-
-
-	- Author Name: MH RONY.
-	- GigHub Link: https://github.com/dev-mhrony
-	- Facebook Link:https://www.facebook.com/dev.mhrony
-	- Youtube Link: <a href = "https://www.youtube.com/@codecampbdofficial"> Code Camp BD</a>
-	- for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
-	- Visit My Website : https://dev-mhrony.com
-	 -->
-	<!-- Main Stylesheets -->
+	
 	<link rel="stylesheet" href="css/style.css"/>
 
 </head>
@@ -115,18 +105,7 @@ $error ="Registration Not successfully";
 
 	<!-- Header Section -->
 	<?php include 'include/header.php';?>
-	<!-- Header Section end -->
-	    	<!-- 
 
-
-	- Author Name: MH RONY.
-	- GigHub Link: https://github.com/dev-mhrony
-	- Facebook Link:https://www.facebook.com/dev.mhrony
-	- Youtube Link: <a href = "https://www.youtube.com/@codecampbdofficial"> Code Camp BD</a>
-	- for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
-	- Visit My Website : https://dev-mhrony.com
-	 -->                                                                          
-	<!-- Page top Section -->
 	<section class="page-top-section set-bg" data-setbg="img/page-top-bg.jpg">
 		<div class="container">
 			<div class="row">
@@ -144,12 +123,7 @@ $error ="Registration Not successfully";
 				<!-- 
 
 
-	- Author Name: MH RONY.
-	- GigHub Link: https://github.com/dev-mhrony
-	- Facebook Link:https://www.facebook.com/dev.mhrony
-	- Youtube Link: <a href = "https://www.youtube.com/@codecampbdofficial"> Code Camp BD</a>
-	- for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
-	- Visit My Website : https://dev-mhrony.com
+	
 	 -->
 			<div class="row">
 				<div class="col-lg-2">
@@ -195,20 +169,7 @@ $error ="Registration Not successfully";
 			</div>
 		</div>
 	</section>
-	<!-- Trainers Section end -->
 
-	<!-- 
-
-
-	- Author Name: MH RONY.
-	- GigHub Link: https://github.com/dev-mhrony
-	- Facebook Link:https://www.facebook.com/dev.mhrony
-	- Youtube Link: <a href = "https://www.youtube.com/@codecampbdofficial"> Code Camp BD</a>
-	- for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
-	- Visit My Website : https://dev-mhrony.com
-	 -->
-
-	<!-- Footer Section -->
 <?php include 'include/footer.php'; ?>
 	<!-- Footer Section end -->
 	
@@ -246,10 +207,4 @@ $error ="Registration Not successfully";
         </style>	<!-- 
 
 
-	- Author Name: MH RONY.
-	- GigHub Link: https://github.com/dev-mhrony
-	- Facebook Link:https://www.facebook.com/dev.mhrony
-	- Youtube Link: <a href = "https://www.youtube.com/@codecampbdofficial"> Code Camp BD</a>
-	- for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
-	- Visit My Website : https://dev-mhrony.com
-	 -->
+	

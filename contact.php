@@ -24,7 +24,9 @@ echo "<script>window.location.href='booking-history.php'</script>";
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
-	<title>Gym Management System</title>
+	<title>FIT-FORGE-GYM</title>
+	<link rel="icon" href="img/icons/favicon.ico" type="image/png">
+
 	<meta charset="UTF-8">
 	<meta name="description" content="Ahana Yoga HTML Template">
 	<meta name="keywords" content="yoga, html">
@@ -43,19 +45,7 @@ echo "<script>window.location.href='booking-history.php'</script>";
 
 </head>
 <body>
-	<!-- Page Preloder -->
 	
-	<!-- 
-
-
-	- Author Name: MH RONY.
-	- GigHub Link: https://github.com/dev-mhrony
-	- Facebook Link:https://www.facebook.com/dev.mhrony
-	- Youtube Link: <a href = "https://www.youtube.com/@codecampbdofficial"> Code Camp BD</a>
-	- for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
-	- Visit My Website : https://dev-mhrony.com
-	 -->
-	<!-- Header Section -->
 	<?php include 'include/header.php';?>
 	<!-- Header Section end -->
 
@@ -73,16 +63,7 @@ echo "<script>window.location.href='booking-history.php'</script>";
 		</div>
 	</section>
 
-	<!-- 
-
-
-	- Author Name: MH RONY.
-	- GigHub Link: https://github.com/dev-mhrony
-	- Facebook Link:https://www.facebook.com/dev.mhrony
-	- Youtube Link: <a href = "https://www.youtube.com/@codecampbdofficial"> Code Camp BD</a>
-	- for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
-	- Visit My Website : https://dev-mhrony.com
-	 -->
+	
 
 	<!-- Pricing Section -->
 	<section class="pricing-section spad">
@@ -91,9 +72,9 @@ echo "<script>window.location.href='booking-history.php'</script>";
 			<div class="row">
 
 				<div class="col-lg-12 col-sm-6">
-<p><strong>Email:</strong> info@yourdomain.com</p>
-<p><strong>Contact No:</strong> 1234567890, 1122334455</p>
-<p><strong>Address:</strong> Test Address</p>
+<p><strong>Email:</strong> sreyan-gym@gmail.com</p>
+<p><strong>Contact No:</strong> 9394932325, 3436612623</p>
+<p><strong>Address:</strong> BSF-Circle</p>
 				</div>
 			</div>
 		</div>
@@ -107,17 +88,7 @@ echo "<script>window.location.href='booking-history.php'</script>";
 	<div class="back-to-top"><img src="img/icons/up-arrow.png" alt=""></div>
 
 	<!-- Search model end -->
-	<!-- 
-
-
-	- Author Name: MH RONY.
-	- GigHub Link: https://github.com/dev-mhrony
-	- Facebook Link:https://www.facebook.com/dev.mhrony
-	- Youtube Link: <a href = "https://www.youtube.com/@codecampbdofficial"> Code Camp BD</a>
-	- for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com
-	- Visit My Website : https://dev-mhrony.com
-	 -->
-	<!--====== Javascripts & Jquery ======-->
+	
 	<script src="js/vendor/jquery-3.2.1.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery.slicknav.min.js"></script>

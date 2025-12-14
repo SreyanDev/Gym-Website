@@ -11,7 +11,6 @@ SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
 
-
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
@@ -32,7 +31,7 @@ CREATE TABLE `tbladdpackage` (
   `category` varchar(45) DEFAULT NULL,
   `titlename` varchar(450) DEFAULT NULL,
   `PackageType` varchar(45) DEFAULT NULL,
-  `PackageDuratiobn` varchar(45) DEFAULT NULL,
+  `PackageDuration` varchar(45) DEFAULT NULL,
   `Price` varchar(45) DEFAULT NULL,
   `uploadphoto` varchar(450) DEFAULT NULL,
   `Description` varchar(450) DEFAULT NULL,
@@ -43,10 +42,11 @@ CREATE TABLE `tbladdpackage` (
 -- Dumping data for table `tbladdpackage`
 --
 
-INSERT INTO `tbladdpackage` (`id`, `category`, `titlename`, `PackageType`, `PackageDuratiobn`, `Price`, `uploadphoto`, `Description`, `create_date`) VALUES
-(1, '1', 'Free Fitness Gear Package', '1', '3 Month', '600', NULL, 'Free Fitness Gear\nComplimentary OnePass', '2022-03-05 02:55:34'),
-(2, '1', '3 Months Membership Package', '1', '6 Month', '800', NULL, 'Book Six Days Different Trainers Class designed for fast Weight Loss', '2022-03-05 02:56:44'),
-(3, '1', 'hgfhfgdfgdf', '1', '4 Month', '12000', NULL, 'hfdgfhfgh<div><br></div><div>fdgdfg</div>', '2022-05-22 02:34:08');
+INSERT INTO `tbladdpackage` (`id`, `category`, `titlename`, `PackageType`, `PackageDuration`, `Price`, `uploadphoto`, `Description`, `create_date`) VALUES
+(1, '1', '3 Months Membership Package', '1', '3 Month', '800', NULL, 'Gym access for 3 months', '2022-03-05 02:55:34'),
+(2, '1', '6 Months Membership Package', '1', '6 Month', '1200', NULL, 'Gym access for 6 months', '2022-03-05 02:56:44'),
+(3, '1', 'Yearly Membership Package', '1', '12 Month', '3000', NULL, 'Gym access for 1 year', '2022-05-22 02:34:08');
+
 
 -- --------------------------------------------------------
 
